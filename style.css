@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* "Clean White" Template by Dieter Schneider | www.csstemplateheaven.com */
+
+* {margin: 0; padding: 0}
+
+img {border: none}
+
+body {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; font-size: 110%; color:#666}
+
+#container {width: 800px; height:470px; margin:  auto; font-size: .875em }
+
+#larger_container{width: 840px; height:470px; margin:20px auto;}
+
+#logo {width: 220px; height:64px; float: left; margin-bottom: 20px}
+
+#header {height: 395px; background: url(imges/header3.png) bottom no-repeat; clear: both }
+
+#header_contact {height: 100px;}
+
+#wrap {clear: both}
+
+#just {text-align:justify; clear:both;}
+
+#left {width: 430px; float: left}
+
+#right {height: 265px; width: 350px; float: right; background: url(imges/header2.jpg) bottom no-repeat; }
+
+#leftgschomp {width: 500px; float: left}
+
+#rightgschomp {height: 220px; width: 280px; float: right; }
+
+#leftlfexp {width: 380px; float: left}
+
+#rightlfexp { width: 400px; float: right; }
+
+#middle {margin-left: 0px; margin-right: 0px; }
+a.body {color:#66b2b2 ; text-decoration: none; }
+a.body:hover {color: #181818; text-decoration: none; hover: }
+a.foot {color:#181818 ; text-decoration: none; }
+a.title {color: #666; text-decoration: none;}
+a.section {color: #FFF; text-decoration: none;}
+#left, #right, #middle {margin-bottom: 40px}
+
+#footer {background: url(imges/footer.jpg) no-repeat; clear:both; padding: 20px; text-align: center; font-size: .8em}
+
+/* typography */
+
+a {color: #930}
+
+p {padding: 10px 0; text-align: justify}
+
+h2 {background:#A9A9A9 ; padding:2px; color: #FFF; font-weight: normal; letter-spacing: .15em}
+
+li {list-style-position: inside;  padding-top:3px; padding-bottom:3px}
+/* navigation */
+
+#navcontainer ul
+{
+color: White;
+float: right;
+width: 580px;
+padding-top: 25px
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+padding: 0px 1em;
+color: #999;
+font-weight: bold;
+text-decoration: none;
+float: right;
+border-right: 1px solid #fff;
+}
+
+#navcontainer ul li a.current_page
+{
+padding: 0px 1em;
+color: #006666;
+font-weight: bold;
+text-decoration: none;
+float: right;
+border-right: 1px solid #fff;
+}
+
+#navcontainer ul li a:hover
+{
+color: #000;
+font-weight: bold
+}
+
+table, th, td {
+    border: 2px solid grey;
+     border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+
+

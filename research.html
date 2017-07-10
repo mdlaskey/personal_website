@@ -1,0 +1,115 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" media="all" href="style.css">
+<title>Michael Laskey</title>
+</head>
+
+<body>
+<div id="larger_container">
+<div id="container">
+
+<div id="logo"><h4><br></h4><a href="index.html" class="title"><h1>Mike Laskey</h1></a></div>
+
+<div id="navcontainer">
+<ul>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="press.html">Press</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="#" id="current" class="current_page">Research</a></li>
+<li><a href="index.html">Home</a></li>
+</ul>
+</div>
+
+
+
+<div id="header_contact">
+</div>
+
+<h2><a class="section">Imitation Learning</a></h2>
+
+<div id="middle">
+
+<p>Recently, we have witness numerous success stories in Deep Learning ranging from Computer Vision to Natural Language Processing.  My research examines how can we move this technology into the industrial manufacturing sector via robotic learning.</p>
+
+<p style="text-align:center;">
+<img src="images/box.gif" width="300" height="180" /><br />
+<i>ABB YuMi Robot Closing a Box using Imitation Learning</i>
+</p>
+
+
+<p>Robotic manipulation tasks are challenging to learn due to noncontinuous dynamics, high dimensional state representations, and potentially delayed reward. Consider for example the box-closing task shown above. From an Reinforcement Learning perspective this is hard because the reward function, that provides sufficient information,  could be difficult to specify. Classical robotic techniques could also be problematic for this task, because they require a model for how the box deforms under the applied forces. However, by using <i>supervision</i> we can manually guide the robot to complete the task. The robot then uses machine learning to infer the underlying behavior. The research field that studies this approach is known as Imitation Learning. </p>
+
+
+
+
+
+</div>
+
+
+<div id="just">
+<h2><a class="section">Increasing Realability</a></h2>
+
+<div id="middle">
+
+<p> An intuitive approach to  provide supervision to a robot is a technique known as Behavior Cloning, in which a robot observes a supervisor's policy and learns a mapping from state to control via regression. In the early 90s , this approach was applied to learn an end-to-end self driving car, known as ALVINN. When applying this technique, the researchers observed the car would veer from the center of the road and not know how to recover. The reason for this is that small mistakes could compound during execution of the robot’s policy and force it to enter an area of the state space that wasn’t seen in training, which is known as covariate shift. </p>
+
+
+
+<p style="text-align:center;">
+<img src="images/alvinn.gif" width="300" height="180" /><br />
+<i>ALVINN Suffering from Covariate Shift</i>
+</p>
+
+<p> One technique to correct for covariate shift is by sampling states from the robot's policy. A common algorithm, DAgger, iteratively rolls out its current policy and asks for supervisor labels (or corrections) at the states it visits. Empirically, DAgger has been shown to reduce covariate shift and lead to robust control policies. However, when we have used DAgger in practice on physical robots, we observed that is was challenging for human supervisors. In a human study we performed, it was found that DAgger is performed worst than Behavior Cloning due to the extra cognitive burden on humans. The paper and subsequent comparisons of the two algorithms can be found <a href="https://arxiv.org/abs/1610.00850" class="body"> here </a>. </p>
+
+ Another way to show the robot corrective examples and prevent drift is to inject noise into the supervisor's demonstrations. Our insight is that by injecting small levels of noise, we will focus on the states that the robot needs to recover from -- the states <i> at the boundary </i> of the ideal policy. This has the potential to obtain the advantages of DAgger-like methods by recovering from errors as the robot starts making them, without the disadvantage of aggregating these errors at training time, and getting the robot to dangerous states with low reward. A paper that examines this approach in relation to DAgger and Behavior Cloning can be found <a href="https://arxiv.org/abs/1610.00850" class="body"> here </a>. </p>.
+
+
+</div>
+
+<div id="just">
+<h2><a class="section">Industrial Applications</a></h2>
+
+<div id="middle">
+
+<p> Another goal of my research is to apply Imitation Learning algorithms to various manipulation tasks, in order to better understand the limitations, benefits and sample complexity. Recently, we have succesfully applied Imitation Learning to the tasks of <a href="http://eecs.berkeley.edu/" class="body">precision grasping</a> and <a href="http://eecs.berkeley.edu/" class="body">planar grasping in clutter. </a> In the grasping in clutter, tasks a robot must learn how to search for a goal object and reason about how to push obstacle objects out of the way. Shown below is our recent extension to this paradigm, where the robot observes the world through an eye-in-hand camera.
+</p>
+
+
+<p style="text-align:center;">
+<img src="images/hsr.gif" width="300" height="180" /><br />
+<i>HSR Trained to Retrieve Object from Cupboard</i>
+</p>
+
+</p> We have also examined how to build better <a href="http://eecs.berkeley.edu/" class="body"> teleoperation systems </a> for supervisor's to provide demonstrations for industrial robot and how to <a href="http://eecs.berkeley.edu/" class="body"> clean the data</a> for machine learning applications. </p>
+
+
+
+<p></p>
+<p></p>
+
+ 
+</div>
+
+ 
+
+
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7930083; 
+var sc_invisible=1; 
+var sc_security="0defddac"; 
+</script>
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script>
+<noscript>&lt;div class="statcounter"&gt;&lt;a title="tumblr site
+counter" href="http://statcounter.com/tumblr/"
+target="_blank"&gt;&lt;img class="statcounter"
+src="http://c.statcounter.com/7930083/0/0defddac/1/"
+alt="tumblr site counter"&gt;&lt;/a&gt;&lt;/div&gt;</noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+
+</body></html>
